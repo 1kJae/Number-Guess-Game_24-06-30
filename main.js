@@ -85,10 +85,12 @@ function play() {
       } else if (history.length === 3) {
         historyNum3.textContent = history[2];
       }
-
-    if (chances < 1) {
-        resultArea.textContent = "GameOver"
-        gameOver = true
+    
+    if (userValue > computerNum || userValue < computerNum) {
+        if (chances < 1) {
+            resultArea.textContent = "GameOver"
+            gameOver = true
+        }
     }
 
     if (gameOver == true) {
